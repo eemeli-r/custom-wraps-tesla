@@ -33,6 +33,14 @@ Download the template below and customize it with your own design. For complete 
 <a href="example/Vintage_Stripes.png"><img src="example/Vintage_Stripes.png" width="150"/></a>
 </p>
 
+## Custom Designs
+
+<p>
+<a href="custom/"><img src="custom/preview.png" width="150"/></a>
+</p>
+
+[Rantasalo & Co.](custom/) — gloss black with the company wordmark in white on the hood.
+
 ---
 
 [← Back to main page](https://github.com/teslamotors/custom-wraps)
