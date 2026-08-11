@@ -24,9 +24,15 @@ TEMPLATE = HERE.parent / "template.png"
 LOGO_PDF = HERE / "rantasaloco_logo.pdf"
 
 SIZE = 1024                 # texture is 1024x1024, same as the template
-BACKGROUND = (0, 0, 0)      # gloss black over every panel
+
+# Gloss black over every panel. Not #000000: at zero the diffuse term is dead
+# and the body renders as a flat silhouette with no visible form. #1A1A1C is
+# about 1% linear reflectance, which is where real jet black basecoat sits, and
+# the last channel is lifted a touch because automotive blacks read slightly
+# cool rather than dead neutral.
+BACKGROUND = (26, 26, 28)
 INK = (255, 255, 255)       # wordmark colour
-OUTLINE = (74, 74, 74)      # panel outlines, preview.png only
+OUTLINE = (92, 92, 92)      # panel outlines, preview.png only
 
 LOGO_WIDTH = 180            # wordmark width in texture pixels (~62% of hood width)
 LOGO_CENTER_Y = 293         # texture row the wordmark is centred on

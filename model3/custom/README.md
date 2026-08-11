@@ -1,6 +1,7 @@
 # Rantasalo & Co. — Model 3 Wrap
 
-Gloss black over every panel, with the RANTASALO & Co. wordmark in white on the hood.
+Gloss black (`#1A1A1C`) over every panel, with the RANTASALO & Co. wordmark in white
+on the hood.
 
 Built for a **2021 Model 3**, which uses the pre-refresh [`model3` template](../template.png).
 2024+ cars use a different UV layout — see [`model3-2024-base`](../../model3-2024-base/)
@@ -32,9 +33,15 @@ The hood, as seen from in front of the car
 
 ## Design notes
 
-* **Canvas** — 1024×1024 RGB PNG, 8.4 KB. Pure black (`#000000`) fills the whole
-  canvas rather than just the panel outlines, so texture filtering can't pull a
-  white fringe in along any panel edge.
+* **Canvas** — 1024×1024 RGB PNG, 10.7 KB. The body colour fills the whole canvas
+  rather than just the panel outlines, so texture filtering can't pull a white
+  fringe in along any panel edge.
+* **Body colour** — `#1A1A1C`, not `#000000`. At zero the diffuse term is dead and
+  the car renders as a flat silhouette, losing all of its bodyline shape. `#1A1A1C`
+  is about 1% linear reflectance, which is where real jet black basecoat sits, and
+  the blue channel is lifted by two because automotive blacks read slightly cool
+  rather than dead neutral. Tesla's own examples put black between 18 and 35, and
+  their `Camo_Stealth` uses the same faint cool cast.
 * **Wordmark** — 180 px wide, ~62% of the hood's 288 px width, centred on the hood's
   centre line at x 511.5. That leaves roughly 26 px of clear space on each side,
   and about 110 px ahead of and 90 px behind the mark. On the car the wordmark
@@ -61,9 +68,9 @@ pip install pillow numpy pymupdf
 python3 build_wrap.py
 ```
 
-`LOGO_WIDTH` and `LOGO_CENTER_Y` at the top of the script control the size and
-placement of the wordmark. The script fails rather than writing a file if the mark
-would spill off the hood panel.
+`BACKGROUND` sets the body colour, and `LOGO_WIDTH` / `LOGO_CENTER_Y` control the
+size and placement of the wordmark. The script fails rather than writing a file if
+the mark would spill off the hood panel.
 
 ## Files
 
