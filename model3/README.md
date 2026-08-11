@@ -37,9 +37,11 @@ Download the template below and customize it with your own design. For complete 
 
 <p>
 <a href="custom/"><img src="custom/preview.png" width="150"/></a>
+<a href="custom/"><img src="custom/preview_sides.png" width="150"/></a>
 </p>
 
-[Rantasalo & Co.](custom/) — gloss black (`#1A1A1C`) with the company wordmark in white on the hood.
+[Rantasalo & Co.](custom/) — gloss black (`#1A1A1C`) with the company wordmark in white,
+on the hood or on both front doors.
 
 ---
 
